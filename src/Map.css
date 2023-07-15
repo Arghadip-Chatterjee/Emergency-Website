@@ -1,0 +1,86 @@
+/* Add these styles to your CSS file or component */
+
+/* Map container */
+#map {
+    width: 100%;
+    height: 50vh;
+  }
+
+.background{
+  background-color: rgb(41, 80, 131);
+}
+  
+  /* Distance traveled */
+  .distance {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: aliceblue;
+  }
+  
+  /* Input fields and buttons container */
+  .input-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Input fields */
+  .input-field {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 20%;
+  }
+  
+  /* Location Access and Search buttons */
+  .button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  
+  /* ChatSonic button */
+  .chat-sonic-button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* ChatSonic output */
+  .chat-sonic-output {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Media queries for responsive design */
+
+/* Mobile devices */
+@media (max-width: 767px) {
+  /* Input fields */
+  .input-field {
+    width: 80%;
+  }
+}
+
+/* Tablets and larger screens */
+@media (min-width: 768px) {
+  /* Input fields */
+  .input-field {
+    width: 40%;
+  }
+}
