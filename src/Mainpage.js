@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import firebase from './firebase';
 import MapComponent from './Map2';
 import './MainPage.css'; // Import CSS file for styling
+import { SignedIn, SignedOut } from '@clerk/clerk-react';
 
 const MainPage = () => {
   const navigate = useNavigate();
@@ -12,17 +12,8 @@ const MainPage = () => {
   };
 
   const handleSignOut = () => {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => {
-        // Handle successful sign-out
-        navigate('/');
-      })
-      .catch((error) => {
-        // Handle error
-        console.error(error);
-      });
+    navigate('/sign-in');
+
   };
 
   return (
@@ -31,12 +22,16 @@ const MainPage = () => {
         <MapComponent />
       </div>
       <div className="button-container">
-        <button className="book-button" onClick={book}>
-          Book Now
-        </button>
-        <button className="sign-out-button" onClick={handleSignOut}>
-          Sign Out
-        </button>
+        <SignedIn>
+          <button className="book-button" onClick={book}>
+            Book Now
+          </button>
+        </SignedIn>
+
+        <SignedOut>
+          <button className="sign-out-button" onClick={handleSignOut}>SignIn</button>
+        </SignedOut>
+
       </div>
     </div>
   );

@@ -213,10 +213,10 @@ const Map = () => {
         Search
       </button>
       <br />
-
+{/* 
       <div>
         <Chatbot />
-      </div>
+      </div> */}
     </div>
     <RideSelector distance={distance} />
   </div>
